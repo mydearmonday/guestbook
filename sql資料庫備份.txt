@@ -1,0 +1,38 @@
+-- phpMyAdmin SQL Dump
+-- version 2.10.3
+-- http://www.phpmyadmin.net
+-- 
+-- 主機: localhost
+-- 建立日期: Jul 07, 2014, 06:42 AM
+-- 伺服器版本: 5.0.51
+-- PHP 版本: 5.2.6
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+-- 
+-- 資料庫: `guestbook`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- 資料表格式： `guestbook`
+-- 
+
+CREATE TABLE `guestbook` (
+  `id` int(11) NOT NULL auto_increment COMMENT '流水號',
+  `name` varchar(50) NOT NULL COMMENT '姓名',
+  `email` varchar(255) NOT NULL COMMENT 'email',
+  `sex` int(1) NOT NULL COMMENT '性別',
+  `content` text NOT NULL COMMENT '留言內容',
+  `create_time` varchar(10) NOT NULL COMMENT '留言時間',
+  `ip` varchar(15) NOT NULL COMMENT 'IP位置',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+-- 
+-- 列出以下資料庫的數據： `guestbook`
+-- 
+
+INSERT INTO `guestbook` VALUES (5, '榴槤', 'peorp@yahoo.com.tw', 1, '測試一下', '1404715300', '127.0.0.1');
+INSERT INTO `guestbook` VALUES (4, '蘋果', 'po@yahoo.com.tw', 1, '我是蘋果', '1404715272', '127.0.0.1');
